@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test1
+namespace TestPackage
 {
-    public string Value1 = "value1";
+    public class Test1
+    {
+        public string Value1 = "value1";
+        public string Value2 = "value2";
+    }
 }
