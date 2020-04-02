@@ -4,11 +4,17 @@ using UnityEngine;
 
 namespace TestPackage
 {
-    public class Test1
+    namespace test1
     {
-        public string Value1 = "value1";
-        public string Value2 = "value2";
-        public string Value3 = "value3";
-        public string Value4 = "value4";
+        public class Test1
+        {
+            public string Value1 { get; set; } = "value1";
+
+            public string GetJson()
+            {
+                string result = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+                return result;
+            }
+        }
     }
 }
